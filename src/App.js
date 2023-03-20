@@ -1,15 +1,21 @@
-import Navbar from "./components/Nabvar/Navbar";
 import "./App.css";
-import HeaderCarousel from "./components/Section/Carousel";
-import NavbarCard from "./components/Section/Card";
+import { Route, Routes } from "react-router-dom";
+import AboutUs from "./components/AboutUs/AboutUs";
+import Layout from "./components/Layout";
+import News from "./components/News/News";
 
 function App() {
   return (
     <>
-      <Navbar />
+    <Routes>
+      <Route path="/" element={<Layout/>}/>
+      <Route path="/AboutUs" element={<AboutUs/>}/>
+      <Route path="/news" element={<News/>}/>
+    </Routes>
+      {/* <Navbar />
       <HeaderCarousel />
       <NavbarCard />
-      <h1>hello world</h1>
+      <h1>hello world</h1> */}
     </>
   );
 }
