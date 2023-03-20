@@ -11,12 +11,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 // import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+// import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import LittleNavbar from "./LittleNavbar";
 
 const pages = [
   { title: "About us", to: "/AboutUs" },
   { title: "News", to: "/news" },
+  { title: "Activity", to: "/activity" },
+  { title: "Contact us", to: "/contuctUs" },
 ];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -39,11 +42,11 @@ function ResponsiveAppBar() {
   //     setAnchorElUser(null);
   //   };
 
-  return (
-    <AppBar position="static">
+  return (<>
+    <AppBar position="static" style={{backgroundColor:"#fff"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -59,7 +62,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            Logo
+            <img src="Logo.png" alt="" style={{maxWidth:"120px",marginRight:"100px",marginLeft:"100px"}}/>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -69,7 +72,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="black"
             >
               <MenuIcon />
             </IconButton>
@@ -88,7 +91,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none", },
               }}
             >
               {pages.map((page) => (
@@ -98,7 +101,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none", color:"black" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -115,15 +118,15 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <img src="Logo.png" alt="" style={{maxWidth:"100px"}}/>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={`${page.to}`}>
+              <Link style={{ textDecoration: 'none' }} to={`${page.to}`}>
                 <Button
                   key={page.title}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: "black", display: "block",fontWeight: 700, }}
                 >
                   {page.title}
                 </Button>
@@ -163,6 +166,8 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
+    <LittleNavbar/>
+    </>
   );
 }
 export default ResponsiveAppBar;
