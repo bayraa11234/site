@@ -35,7 +35,7 @@ function NavbarCard() {
         className="row"
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
           gap: 5,
         }}
       >

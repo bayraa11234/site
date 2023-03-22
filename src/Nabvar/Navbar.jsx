@@ -43,7 +43,8 @@ function ResponsiveAppBar() {
   //   };
 
   return (<>
-    <AppBar position="static" style={{backgroundColor:"#fff"}}>
+    <LittleNavbar/>
+    <AppBar position="sticky" style={{backgroundColor:"#fff"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -166,7 +167,6 @@ function ResponsiveAppBar() {
         </Toolbar>
       </Container>
     </AppBar>
-    <LittleNavbar/>
     </>
   );
 }

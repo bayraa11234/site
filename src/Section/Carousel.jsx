@@ -10,21 +10,21 @@ export default function HeaderCarousel() {
   const carouselItems = [
     {
       image:
-        "https://media.cnn.com/api/v1/images/stellar/prod/181002113456-01-golden-gate-bridge-restricted.jpg?q=w_3653,h_2055,x_0,y_0,c_fill",
+    "https://www.hassandentistry.com/wp-content/uploads/dental-bonding-header.jpg",
       alt: "first image",
       title: "first",
       description: "first description",
     },
     {
       image:
-        "https://media.cnn.com/api/v1/images/stellar/prod/181002113456-01-golden-gate-bridge-restricted.jpg?q=w_3653,h_2055,x_0,y_0,c_fill",
+        "https://www.nolanriverdentalcenter.com/wp-content/uploads/find-a-dentist-header.jpg",
       alt: "second image",
       title: "second",
       description: "second description",
     },
     {
       image:
-        "https://media.cnn.com/api/v1/images/stellar/prod/181002113456-01-golden-gate-bridge-restricted.jpg?q=w_3653,h_2055,x_0,y_0,c_fill",
+        "https://vdentalcare.in/wp-content/uploads/2021/06/csm_Dental-medical_3_2_e5278842a1.jpg",
       alt: "third image",
       title: "third",
       description: "third description",
@@ -39,6 +39,7 @@ export default function HeaderCarousel() {
             className="d-block w-100 carousel-image"
             src={carouselItem.image}
             alt={carouselItem.alt}
+            style={{backgroundPosition:"center",backgroundSize:"cover"}}
           />
           <Carousel.Caption>
             <h3>{carouselItem.title}</h3>
