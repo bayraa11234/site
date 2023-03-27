@@ -25,17 +25,17 @@ export default function Form() {
         </div>
         <div class="mb-3">
           <input
-            type="number"
+            type="text"
             class="form-control"
             id="exampleInputPassword1"
             placeholder="Утасний дугаар"
           />
         </div>
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">
+          {/* <input type="checkbox" class="form-check-input" id="exampleCheck1" /> */}
+          {/* <label class="form-check-label" for="exampleCheck1">
             Check me out
-          </label>
+          </label> */}
         </div>
         <Calendar/>
         <button type="submit" class="btn btn-primary">

@@ -17,6 +17,7 @@ export default function Layout() {
         <Choise/>
       </div>
       <Form/>
+      <div></div>
       <Footer />
     </>
   );
