@@ -12,7 +12,7 @@ export default function TimeDemo() {
 
     return (
         
-                <Calendar id="calendar-24h" value={datetime24h} onChange={(e) => setDateTime24h(e.value)} showTime hourFormat="24" placeholder="calendar" />
+        <Calendar id="calendar-24h" value={datetime24h} onChange={(e) => setDateTime24h(e.value)} showTime hourFormat="24" placeholder="calendar" style={{width:"100%"}}/>
            
     )
 }

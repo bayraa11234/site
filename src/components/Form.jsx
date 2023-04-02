@@ -3,7 +3,7 @@ import Calendar from "./Calendar";
 
 export default function Form() {
   return (
-    <div style={{maxWidth:"400px"}}>
+    <div style={{maxWidth:"400px"}} className="card p-4">
       <form>
       <div class="mb-3">
           <input
@@ -31,13 +31,9 @@ export default function Form() {
             placeholder="Утасний дугаар"
           />
         </div>
-        <div class="mb-3 form-check">
-          {/* <input type="checkbox" class="form-check-input" id="exampleCheck1" /> */}
-          {/* <label class="form-check-label" for="exampleCheck1">
-            Check me out
-          </label> */}
-        </div>
+        <div className="mb-3">
         <Calendar/>
+        </div>
         <button type="submit" class="btn btn-primary">
           Submit
         </button>
