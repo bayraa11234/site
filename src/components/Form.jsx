@@ -3,7 +3,7 @@ import Calendar from "./Calendar";
 
 export default function Form() {
   return (
-    <div style={{maxWidth:"400px"}} className="card p-4">
+    <div style={{width:"400px"}} className="card p-4">
       <form>
       <div class="mb-3">
           <input
@@ -28,7 +28,7 @@ export default function Form() {
             type="text"
             class="form-control"
             id="exampleInputPassword1"
-            placeholder="Утасний дугаар"
+            placeholder="Утасны дугаар"
           />
         </div>
         <div className="mb-3">

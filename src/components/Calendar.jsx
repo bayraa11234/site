@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { Calendar } from 'primereact/calendar';
 import "primereact/resources/themes/lara-light-indigo/theme.css";   
-import "primereact/resources/primereact.min.css";  
+import "primereact/resources/primereact.min.css"; 
+import "primeicons/primeicons.css";  
 
 
 export default function TimeDemo() {
-    // const [datetime12h, setDateTime12h] = useState(null);
     const [datetime24h, setDateTime24h] = useState(null);
     // const [time, setTime] = useState(null);
 

@@ -7,10 +7,15 @@ ul li {
 }
 .carousel-image {
   max-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
 }
-
+.footer{
+  background-color: rgb(37, 189, 189);  
+}
 .footer-ul {
-  background-color: rgb(37, 189, 189);
   margin: 0;
   display: flex;
   justify-content: space-around;
@@ -19,4 +24,8 @@ ul li {
 }
 .bb{
   background-image: url("https://www.euracarehealth.com/wp-content/uploads/2020/11/dentistry_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
 }

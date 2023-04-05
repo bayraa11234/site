@@ -16,8 +16,10 @@ export default function Layout() {
         <NavbarCard />
         <Choise/>
       </div>
-      <div className="bb py-3">
-      <Form/>
+      <div className="bb p-4 ">
+        <div className="container d-flex justify-content-end">
+      <Form />
+      </div>
       </div>
       <Footer />
     </>
