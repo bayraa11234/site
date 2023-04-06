@@ -5,6 +5,7 @@ import NavbarCard from "../Section/Card";
 import Footer from "./Footer/Footer";
 import Choise from "./Choise";
 import Form from "./Form";
+import Slider from "./slider/Slider";
 
 export default function Layout() {
   return (
@@ -13,6 +14,7 @@ export default function Layout() {
       <Navbar />
       <HeaderCarousel />
       <div className="container">
+        <Slider/>
         <NavbarCard />
         <Choise/>
       </div>
