@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Poppins, sans-serif;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .section .box {
+    height: 20%;
+    width: 100%;
+    padding: 2em;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+  }
+  
+  .section .box h2 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .section .box .content {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .section .box:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://www.almanac.com/sites/default/files/styles/large/public/image_nodes/summer-sunset.jpg?itok=CMJ8-qwL") center no-repeat;
+    background-size: cover;
+  }
+  
+  .section .box:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://thumbs.dreamstime.com/b/small-winter-stream-snowy-trees-bank-60203986.jpg") center no-repeat;
+    background-size: cover;
+  }
+  
+  .section .box:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://cdn.britannica.com/88/137188-050-8C779D64/Boston-Public-Garden.jpg") center no-repeat;
+    background-size: cover;
+  }
+  
+  .section .box.active {
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+    transition: all .5s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .section .box.active::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .section .box.active .content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .section .box.active .content h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .section .box.active .content hr {
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin: 2em 0;
+  }
+  
+  .section .box.active .content p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2em;
+  }
+  
+  .section .box.active .content .img img {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .section {
+      flex-direction: row;
+    }
+  
+    .section .box {
+      width: 20%;
+      height: 100%;
+      padding: 1em;
+    }
+  
+    .section .box.active {
+      width: 60%;
+      height: 100%;
+    }
+  
+    .section .box.active .content .img img {
+      width: 80%;
+      padding: 2em 0;
+    }
+  }
+  
+  @media (min-width: 1045px) {
+    .section .box {
+      padding: 4em;
+    }
+  
+    .section .box h2 {
+      font-size: 34px;
+    }
+  }
+  
