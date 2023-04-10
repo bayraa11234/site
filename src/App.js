@@ -6,6 +6,7 @@ import News from "./components/News/News";
 import NotFound from "./components/NotFound";
 import ContuctUs from "./components/ContuctUs";
 
+
 function App() {
   return (
     <>

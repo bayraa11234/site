@@ -1,0 +1,143 @@
+/* For the container of the entire component */
+.w-full {
+    width: 100%;
+  }
+  
+  .max-w-md {
+    max-width: 28rem;
+  }
+  
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .sm\:px-0 {
+    @media (min-width: 640px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  /* For the Tab.List */
+  .flex {
+    display: flex;
+  }
+  
+  .space-x-1 {
+    --space-x-reverse: 0;
+    margin-right: calc(0.25rem * var(--space-x-reverse));
+    margin-left: calc(0.25rem * (1 - var(--space-x-reverse)));
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .rounded-xl {
+    border-radius: 1rem;
+  }
+  
+  .tab-list {
+    --bg-opacity: 0.2;
+    background-color: #1d4ed8;
+    background-color: rgba(29, 78, 216, var(--bg-opacity));
+  }
+  
+  .p-1 {
+    padding: 0.25rem;
+  }
+  
+  /* For the Tab component */
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .leading-5 {
+    line-height: 1.25rem;
+  }
+  
+  .text-blue-700 {
+    color: #1d4ed8;
+  }
+  
+  .ring-white {
+    --ring-offset-shadow: 0 0 transparent;
+    --ring-shadow: 0 0 transparent;
+    --shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow, 0 0 transparent);
+    --ring-color: #fff;
+    --ring-offset-width: 0px;
+    --ring-offset-color: #fff;
+    --ring-width: 2px;
+    box-shadow: var(--shadow);
+  }
+  
+  .ring-opacity-60 {
+    --ring-opacity: 0.6;
+  }
+  
+  .ring-offset-2 {
+    --ring-offset-width: 0.125rem;
+  }
+  
+  .ring-offset-blue-400 {
+    --ring-offset-color: #60a5fa;
+  }
+  
+  .focus\\:outline-none:focus {
+    outline: none;
+  }
+  
+  .focus\\:ring-2:focus {
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow, 0 0 0 2px var(--ring-color));
+  }
+  
+  /* For the selected Tab */
+  .bg-white {
+    background-color: #fff;
+  }
+  
+  .shadow {
+    --shadow: 0 0 0 2px rgba(29, 78, 216, 0.6);
+    box-shadow: var(--shadow);
+  }
+  
+  /* For the unselected Tab */
+  .text-blue-100 {
+    color: #9ca3af;
+  }
+  
+  .tab-hover:hover {
+    --bg-opacity: 0.12;
+    background-color: rgba(255, 255, 255, var(--bg-opacity));
+  }
+  
+  .hover\\:text-white:hover {
+    color: #fff;
+  }
+  
+  /* For the Tab.Panels */
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  /* For the Tab.Panel */
+  .bg-white {
+    background-color: #fff;
+  }
+  
+  .p-3 {
+    padding: 0.75rem;
+  }
+  
+  .hover\\:bg-gray-100:hover {
+    --bg-opacity: 0.04;
+    background-color: rgba
+  }

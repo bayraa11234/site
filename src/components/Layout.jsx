@@ -6,6 +6,7 @@ import Footer from "./Footer/Footer";
 import Choise from "./Choise";
 import Form from "./Form";
 import Slider from "./slider/Slider";
+import Tabs from "./Tabs";
 
 export default function Layout() {
   return (
@@ -14,6 +15,7 @@ export default function Layout() {
       <Navbar />
       <HeaderCarousel />
       <div className="container">
+        <Tabs/>
         <Slider/>
         <NavbarCard />
         <Choise/>
