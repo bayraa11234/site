@@ -102,7 +102,7 @@ export default function Tabs() {
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
-                    : "text-blue-100 hover:bg-white/[0.12] tab-hover hover:text-white"
+                    : "text-[#25bdbd] hover:bg-black/[0.1] tab-hover"
                 )
               }
             >
