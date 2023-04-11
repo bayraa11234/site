@@ -3,9 +3,9 @@ import Calendar from "./Calendar";
 
 export default function Form() {
   return (
-    <div style={{width:"400px"}} className="card p-4">
+    <div style={{ width: "400px" }} className="card p-4">
       <form>
-      <div class="mb-3">
+        <div class="mb-3">
           <input
             type="text"
             class="form-control"
@@ -32,9 +32,13 @@ export default function Form() {
           />
         </div>
         <div className="mb-3">
-        <Calendar/>
+          <Calendar />
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button
+          type="submit"
+          className="btn"
+          style={{ backgroundColor: "rgb(37, 189, 189)", width: "100%" }}
+        >
           Submit
         </button>
       </form>

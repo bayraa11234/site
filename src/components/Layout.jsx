@@ -13,17 +13,18 @@ export default function Layout() {
     <>
       {" "}
       <Navbar />
-      <HeaderCarousel />
       <div className="container">
-        <Tabs/>
-        <Slider/>
+        <HeaderCarousel />
+        <Tabs />
+        <Slider />
+        <img src="up.png" alt="" className="fix" />
         <NavbarCard />
-        <Choise/>
+        <Choise />
       </div>
       <div className="bb p-4 ">
         <div className="container d-flex justify-content-end">
-      <Form />
-      </div>
+          <Form />
+        </div>
       </div>
       <Footer />
     </>

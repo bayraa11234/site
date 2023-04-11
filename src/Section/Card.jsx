@@ -45,7 +45,12 @@ function NavbarCard() {
             <Card.Body>
               <Card.Title>{cardItem.title}</Card.Title>
               <Card.Text>{cardItem.description}</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button
+                variant="btn "
+                style={{ backgroundColor: "rgb(37, 189, 189)" }}
+              >
+                Go somewhere
+              </Button>
             </Card.Body>
           </Card>
         ))}

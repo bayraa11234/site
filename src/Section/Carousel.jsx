@@ -9,22 +9,19 @@ export default function HeaderCarousel() {
 
   const carouselItems = [
     {
-      image:
-    "https://www.hassandentistry.com/wp-content/uploads/dental-bonding-header.jpg",
+      image: "zurag1.png",
       alt: "first image",
       title: "first",
       description: "first description",
     },
     {
-      image:
-        "https://www.nolanriverdentalcenter.com/wp-content/uploads/find-a-dentist-header.jpg",
+      image: "zurag2.png",
       alt: "second image",
       title: "second",
       description: "second description",
     },
     {
-      image:
-        "https://vdentalcare.in/wp-content/uploads/2021/06/csm_Dental-medical_3_2_e5278842a1.jpg",
+      image: "zurag3.png",
       alt: "third image",
       title: "third",
       description: "third description",
@@ -32,19 +29,29 @@ export default function HeaderCarousel() {
   ];
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} className="bg-black">
       {carouselItems.map((carouselItem) => (
         <Carousel.Item>
-          <img
-            className="d-block w-100 carousel-image"
-            src={carouselItem.image}
-            alt={carouselItem.alt}
-            style={{backgroundPosition:"center",backgroundSize:"cover"}}
-          />
-          <Carousel.Caption>
-            <h3>{carouselItem.title}</h3>
-            <p>{carouselItem.description}</p>
-          </Carousel.Caption>
+          <div className="d-flex container justify-content-evenly">
+            <div className="d-flex align-items-center">
+              <div>
+                <h1
+                  className="fw-bold"
+                  style={{ color: "#1B5A7D", marginBottom: "30px" }}
+                >
+                  {carouselItem.title}
+                </h1>
+                <h3>{carouselItem.description}</h3>
+              </div>
+            </div>
+            <div>
+              <img
+                src={carouselItem.image}
+                alt=""
+                style={{ maxHeight: "360px" }}
+              />
+            </div>
+          </div>
         </Carousel.Item>
       ))}
     </Carousel>
