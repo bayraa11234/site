@@ -15,7 +15,10 @@ module.exports = {
     },
     container: {
       center: true,
-      screen:"1024px"
+      screens: {
+        xl: "1100px",
+        "2xl": "1100px",
+      },
     },
   },
   plugins: [],
