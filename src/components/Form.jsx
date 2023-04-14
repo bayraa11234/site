@@ -1,49 +1,37 @@
 import React from "react";
 import { useState } from "react";
-import { Calendar } from 'primereact/calendar';
-import "primereact/resources/themes/lara-light-indigo/theme.css";   
-import "primereact/resources/primereact.min.css"; 
-import "primeicons/primeicons.css";  
+import { Calendar } from "primereact/calendar";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import axios from "axios";
 
-
 export default function Form() {
-  const [inputName, setInputName] = useState('');
-  const [inputEmail, setInputEmail] = useState('');
-  const [inputNumber, setInputNumber] = useState('');
-  const [datetime24h, setDateTime24h] = useState(null);
-  
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    number: "",
+    date: "",
+  });
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      const data = {
-        name: inputName,
-        email: inputEmail,
-        phone: inputNumber,
-        dateTime: datetime24h
-      };
-      const response = await axios.post('http://localhost:3001/user', data);
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
+    // console.log("huselt:", user);
+    // const u = { ...user };
+    axios
+      .post("http://localhost:3001/user", { user: user })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  
 
-  const handleChangeName = (event) => {
-    setInputName(event.target.value);
-  }
-  const handleChangeEmail = (event) => {
-    setInputEmail(event.target.value);
-  }
-  const handleChangeNumber = (event) => {
-    setInputNumber(event.target.value);
-  }
-  const handleChangeTime = (event) => {
-    setDateTime24h(event.target.value);
-  }
-  
+  const handleChange = (event) => {
+    setUser({ ...user, [event.target.name]: event.target.value });
+  };
+
   return (
     <div style={{ width: "400px" }} className="card p-4">
       <form onSubmit={handleSubmit}>
@@ -53,8 +41,10 @@ export default function Form() {
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            value={user.name}
             placeholder="Нэр"
-            onChange={handleChangeName}
+            name="name"
+            onChange={(e) => handleChange(e)}
           />
         </div>
         <div class="mb-3">
@@ -64,8 +54,8 @@ export default function Form() {
             id="exampleInputEmail2"
             aria-describedby="emailHelp"
             placeholder="Email"
-            onChange={handleChangeEmail}
-
+            name="email"
+            onChange={(e) => handleChange(e)}
           />
         </div>
         <div class="mb-3">
@@ -74,12 +64,20 @@ export default function Form() {
             class="form-control"
             id="exampleInputPassword1"
             placeholder="Утасны дугаар"
-            onChange={handleChangeNumber}
-
+            name="number"
+            onChange={(e) => handleChange(e)}
           />
         </div>
         <div className="mb-3">
-        <Calendar id="calendar-24h" onChange={handleChangeTime} showTime hourFormat="24" placeholder="calendar" style={{width:"100%"}}/>
+          <Calendar
+            id="calendar-24h"
+            onChange={(e) => handleChange(e)}
+            name="date"
+            showTime
+            hourFormat="24"
+            placeholder="calendar"
+            style={{ width: "100%" }}
+          />
         </div>
         <button
           type="submit"

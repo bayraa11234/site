@@ -7,7 +7,6 @@ import Choise from "./Choise";
 import Form from "./Form";
 // import Slider from "./slider/Slider";
 import Tabs from "./Tabs";
-// import Scroll from "../components/Scroll"
 
 export default function Layout() {
   return (
@@ -16,7 +15,6 @@ export default function Layout() {
       <Navbar />
       <div className="container">
         <HeaderCarousel />
-        {/* <Scroll/> */}
         <Tabs />
         {/* <Slider /> */}
         <img src="up.png" alt="" className="fix" />
