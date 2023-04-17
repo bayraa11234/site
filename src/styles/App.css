@@ -37,6 +37,5 @@ ul li {
     z-index: 14;
       bottom: 10px;
       right: 10px;
-      width: 300px;
-      max-width: 100px;
+      max-width: 70px;
 }

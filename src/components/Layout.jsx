@@ -7,6 +7,7 @@ import Choise from "./Choise";
 import Form from "./Form";
 // import Slider from "./slider/Slider";
 import Tabs from "./Tabs";
+import ScrollToTopButton from "../components/ScrollToTopButton"
 
 export default function Layout() {
   return (
@@ -17,7 +18,6 @@ export default function Layout() {
         <HeaderCarousel />
         <Tabs />
         {/* <Slider /> */}
-        <img src="up.png" alt="" className="fix" />
         <NavbarCard />
         <Choise />
       </div>
@@ -26,6 +26,8 @@ export default function Layout() {
           <Form />
         </div>
       </div>
+      <ScrollToTopButton/>
+
       <Footer />
     </>
   );
